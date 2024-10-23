@@ -9,7 +9,6 @@ namespace GelirGider.Controllers
 {
     public class AdminController : Controller
     {
-        string connectionString = "Server=45.84.189.34\\MSSQLSERVER2019;Initial Catalog=muham128_GelirGider;User Id=muham128_GelirGiderDb;Password=522848Aa.;TrustServerCertificate=True";
         public bool CheckLogin()
         {
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("email")))

@@ -9,7 +9,6 @@ namespace GelirGider.Controllers
 {
     public class LoginController : Controller
     {
-        string connectionString = "Server=45.84.189.34\\MSSQLSERVER2019;Initial Catalog=muham128_GelirGider;User Id=muham128_GelirGiderDb;Password=522848Aa.;TrustServerCertificate=True";
         public IActionResult Login()
         {
             ViewData["email"] = HttpContext.Session.GetString("email");
@@ -78,7 +77,7 @@ namespace GelirGider.Controllers
 
                 var client = new SmtpClient("smtp.eu.mailgun.org", 587)
                 {
-                    Credentials = new NetworkCredential("postmaster@bildirim.muhammetcoskun.com.tr", "bc4babb0ed21f37fe993af60bd8bbd9f-623e10c8-acec0be3"),
+                    Credentials = new NetworkCredential(""),
                     EnableSsl = true
                 };
                 var Key = Guid.NewGuid().ToString();
@@ -108,7 +107,7 @@ namespace GelirGider.Controllers
         {
             var client = new SmtpClient("smtp.eu.mailgun.org", 587)
             {
-                Credentials = new NetworkCredential("postmaster@bildirim.muhammetcoskun.com.tr", "bc4babb0ed21f37fe993af60bd8bbd9f-623e10c8-acec0be3"),
+                Credentials = new NetworkCredential(""),
                 EnableSsl = true
             };
             var mailMessage = new MailMessage
